@@ -1,0 +1,28 @@
+{
+	"name" : "quazardous/silex-migration",
+	"keywords" : [
+        "doctrine",
+        "migrations",
+        "silex"
+    ],
+	"type" : "library",
+	"description" : "Doctrine migrations service provider for Silex 2",
+	"license" : "MIT",
+	"authors" : [{
+			"name" : "Quazardous",
+			"email" : "berliozdavid@gmail.com",
+			"role" : "Developer"
+		}
+	],
+	"require" : {
+	    "silex/silex" : "^2.0@dev",
+		"quazardous/silex-console": "*@dev",
+		"dflydev/doctrine-orm-service-provider": "^2.0@dev",
+		"doctrine/migrations": "*@dev"
+	},
+	"autoload" : {
+        "psr-4" : {
+            "Quazardous\\Silex\\" : "src/"
+        }
+    }
+}
