@@ -9,7 +9,7 @@ use Pimple\ServiceProviderInterface;
 use Pimple\Container;
 use Quazardous\Silex\Console\ConsoleEvents;
 use Quazardous\Silex\Console\ConsoleEvent;
-use Symfony\Component\Console\Helper\DialogHelper;
+use Symfony\Component\Console\Helper\QuestionHelper;
 use Symfony\Component\Console\Helper\HelperSet;
 use Silex\Api\BootableProviderInterface;
 use Silex\Application;
@@ -40,7 +40,7 @@ class MigrationsServiceProvider implements ServiceProviderInterface, BootablePro
         $app['dispatcher']->addListener(ConsoleEvents::INIT, function (ConsoleEvent $event) use ($app) {
             $console = $event->getConsole();
         
-            $helpers = ['dialog' => new DialogHelper()];
+            $helpers = ['dialog' => new QuestionHelper()];
         
             if (isset($app['orm.em'])) {
                 $helpers['em'] = new EntityManagerHelper($app['orm.em']);
