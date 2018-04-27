@@ -18,7 +18,7 @@
 	    "silex/silex" : "^2.0@dev",
 		"quazardous/silex-console": "*@dev",
 		"dflydev/doctrine-orm-service-provider": "^2.0@dev",
-		"doctrine/migrations": "*@dev"
+		"doctrine/migrations": "^1.0@dev"
 	},
 	"autoload" : {
         "psr-4" : {
